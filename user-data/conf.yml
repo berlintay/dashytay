@@ -1,192 +1,194 @@
 pageInfo:
-  title: Keays Home Lab
-appConfig:
-  theme: glass
+  title: KeaysXYZ
+  appConfig:
+  statusCheck: false
+  theme: glass-2
+  customCss: '.clock p.time { font-sizeL 3rem !important; }'
+  layout: vertical
+  iconSize: small
+  fontAwesomeKey: 9A98CA63-F90B-48C1-89D0-4602BC3820C3
+
+  webSearch:
+  searchEngine: 'duckduckgo'
+  openingMethod: 'newtab'
+
 sections:
-- name: Productivity
+
+- name: Heute
+  iconL far fa-smile-beam
   displayData:
     collapsed: false
-    cols: 2
+    hideForGuests: false
+  widgets: 
+  - type: clock
+  - type: weather
+    options:
+      apiKey: efdbade728b37086877a5e83442004db
+      city: Moncton
+        
+- name: Social & News
+  icon: far fa-thumbs-up
   items:
-  - title: Archive Box
-    description: Web site archiving
-    icon: productivity/archive-box.png
-  - title: Baserow
-    description: Feature-rich dynamic tables (similar to Airtable)
-    icon: productivity/baserow.png
-  - title: Bookstack
-    description: Self-hosted Wiki
-    icon: productivity/bookstack.png
-  - title: Domain Mod
-    description: Manage domains and other internet assets
-    icon: productivity/domain-mod.png
-  - title: Firefly
-    description: Financial manager, for keeping track of expenses, income, budgets, etc
-    icon: productivity/firefly.png
-  - title: Fresh RSS
-    description: RSS feed reader and news aggregator
-    icon: productivity/fresh-rss.png
-  - title: GifWit
-    description: Personal GIF library
-    icon: productivity/gifwit.png
-  - title: Git Tea
-    description: Git service, hosting mirrors of my public repos
-    icon: productivity/git-tea.png
-  - title: LessPass
-    description: Deterministic stateless password manager
-    icon: productivity/lesspass.png
-  - title: NextCloud
-    description: Cloud office suit and collaboration platform
-    icon: productivity/nextcloud.png
-  - title: Paperless
-    description: Scan, index, and archive physical paper documents
-    icon: productivity/paperless.png
-  - title: Photo Prism
-    description: Browsing, organizing, and sharing photos and albums
-    icon: productivity/photo-prism.png
-  - title: Standard Notes
-    description: Encrypted notes app, with extensions and desktop + mobile apps
-    icon: productivity/standard-notes.png
-  - title: Syncthing
-    description: Peer-to-peer file synchronization
-    icon: productivity/syncthing.png
-  - title: VS Code Web
-    description: Cloud based VS Code development environment
-    icon: productivity/vs-code.png
-  - title: Wallabag
-    description: Saved URLs and bookmarks
-    icon: productivity/wallabag.png
-  - title: XBrowserSync
-    description: Bookmarks, history and browser sync
-    icon: productivity/x-browser-sync.png
-- name: Firewall
+  - title: Discord
+    icon: si-discord
+    url: https://discord.com/channels/
+  - title: Mastodon
+    icon: si-mastodon
+    url: https://mastodon.social/
+  - title: Reddit
+    icon: si-reddit
+    url: https://www.reddit.com/
+  - title: HackerNews
+    icon: si-ycombinator
+    url: https://news.ycombinator.com/
+  - title: Twitter
+    icon: si-twitter
+    url: https://twitter.com/
+  - title: YouTube
+    icon: si-youtube
+    url: https://youtube.com/
+  - title: Instagram
+    icon: si-instagram
+    url: https://www.instagram.com/
+    
+- name: Dev & Cloud
+  icon: far fa-code
   items:
-  - title: OPNsense
-    description: Firewall Central Management
-    icon: networking/opnsense.png
-    target: iframe
-  - title: NetData
-    description: System resource usage on firewall
-    icon: networking/netdata.png
-  - title: MalTrail
-    description: Malicious traffic detection system
-    icon: networking/maltrail.png
-  - title: Ntopng
-    description: Network traffic probe and network use monitor
-    icon: networking/ntop.png
-  - title: Sensei
-    description: Additional data features
-    icon: networking/sensei.png
-  - title: Monit
-    description: Status of firewall system alerts
-    icon: networking/monit.png
-  - title: Firewall Logs
-    description: Real-time view of firewall data and logs
-    icon: networking/logs.png
-  - title: WireGuard
-    description: Manage WireGuard client and server on firewall
-    icon: networking/wireguard.png
-- name: Networks
+  - title: GitHub
+    icon: favicon
+    url: https://github.com/
+  - title: StackOverflow
+    icon: favicon
+    url: http://stackoverflow.com/
+  - title: CloudFlare
+    icon: favicon
+    url: https://dash.cloudflare.com/
+    statusCheckAcceptCodes: '403'
+  - title: Netlify
+    icon: favicon
+    url: https://app.netlify.com/
+  - title: Hack the Box
+    icon: favicon
+    url: https://www.hackthebox.com/home
+  - title: Documentation
+  
+- name: Web
+  icon: far fa-wifi
+  
+  displayData:
+    collapsed: true
+    itemSize: small
+    sortBy: default
+    itemCountX: 4
+    cols: 2  
+    rows: 2
   items:
-  - title: Pi-Hole
-    description: DNS settings for ad & tracker blocking
-    icon: networking/pihole.png
-  - title: PiAlert
-    description: Presence monitoring and ARP scanning
-    icon: networking/pialert.png
-  - title: SmokePing
-    description: Network latency monitoring
-    icon: networking/smokeping.png
-  - title: StatPing
-    description: Up-time monitoring for local service
-    icon: networking/statping.png
-  - title: LibreSpeed
-    description: Local network speed and latency test
-    icon: networking/librespeed.png
-  - title: Grafana
-    description: Data visualised on dashboards
-    icon: networking/grafana.png
-- name: System Maintence
+  - title: BurpSuite
+    description: A graphical tool to testing website security
+    icon: #
+    url: https://portswigger.net/burp
+  - title: Commix
+    description: Automated All-in-One OS Command Injection and Exploitation Tool
+    icon: #
+    url: https://github.com/commixproject/commix
+  - title: Hackbar
+    description: Firefox addon for easy web exploitation
+    icon: #
+    url: https://addons.mozilla.org/en-US/firefox/addon/hackbartool/
+  - title: OWASP ZAP
+    description: Intercepting proxy to replay, debug, and fuzz HTTP requests and responses
+    icon: #
+    url: https://www.owasp.org/index.php/Projects/OWASP_Zed_Attack_Proxy_Project
+  - title: Postman
+    description: Testing and sending web requests
+    icon: #
+    url: https://www.postman.com/
+  - title: Raccoon
+    description: Reconnaissance and vulnerability scanning
+    icon: #
+    url: https://github.com/evyatarmeged/Raccoon
+  - title: SQLMap
+    description: Automatic SQL injection and database takeover tool
+    icon: #
+    url: https://github.com/sqlmapproject/sqlmap
+  - title: W3af
+    description: Web Application Attack and Audit Framework
+    icon: #
+    url: https://github.com/andresriancho/w3af
+  - title: Xsser
+    description: Automated XSS tester
+    icon: #
+    url: http://xsser.sourceforge.net/
+
+- name: Bruteforce
+displayData:
+    collapsed: true
+    itemSize: small
+    sortBy: default
+    itemCountX: 4
+    cols: 2  
+    rows: 2
+  icon: far fa-user-visor
   items:
-  - title: NetData
-    description: Real-time system resource usage
-    icon: networking/netdata.png
-  - title: Portainer
-    description: Docker container management
-    icon: networking/portainer.png
-  - title: cAdvisor
-    description: Container monitoring
-    icon: networking/cadvisor.png
-  - title: Glances
-    description: Simple resource usage
-    icon: networking/glances.png
-  - title: Dozzle
-    description: Docker container web log viewer
-    icon: networking/dozzle.png
-  - title: Prometheus
-    description: System Statistics Aggregation with PromQL
-    icon: networking/prometheus.png
-- name: External Services
+  - title: HashCat
+    description: Password cracker
+    icon: #
+    url: https://hashcat.net/hashcat/
+  - title: Hydra
+    description: parallelized login cracker which supports numerous protocols to attack
+    icon: #
+    url: https://tools.kali.org/password-attacks/hydra
+  - title: John The Jumbo
+    description: Community enhanced version of John the Ripper password cracker
+    icon: #
+    url: https://github.com/magnumripper/JohnTheRipper
+  - title: Nozzlr
+    description: Script-friendly, modular bruteforce framework
+    icon: #
+    url: https://github.com/intrd/nozzlr
+
+- name: Forensics
+displayData:
+    collapsed: true
+    itemSize: small
+    sortBy: default
+    itemCountX: 4
+    cols: 2  
+    rows: 2
+  icon: far fa-microscope
   items:
-  - title: DuckDNS
-    description: Dynamic DNS for fixed public IP
-    icon: networking/duckdns.png
-  - title: BorgBase
-    description: Off-site system Borg backups
-    icon: networking/borgbase.png
-    url: https://www.borgbase.com/repositories
-  - title: Mullvad
-    description: Hosted VPN provider
-    icon: networking/mullvad.png
-    url: https://mullvad.net/en/account/
-  - title: ZeroTier
-    description: Secure networks between devices
-    icon: networking/zeroteir.png
-    url: https://my.zerotier.com/
-  - title: HealthChecks
-    description: Cron Job Monitoring
-    icon: networking/healthchecks.png
-    url: https://healthchecks.io/checks/
-  - title: ISP - Vodafone
-    description: Broadband internet provider
-    icon: networking/vodafone.png
-    url: https://myaccount.vodafone.co.uk/
-- name: Media
+  - title: Dnscat2
+    description: Hosts communication through DNS
+    icon: #
+    url: https://github.com/iagox86/dnscat2
+  - title: Registry Dumper
+    description: Examine registry of devices
+    icon: #
+    url: http://www.kahusecurity.com/posts/registry_dumper_find_and_dump_hidden_registry_keys.html
+  - title: Magnet AXIOM
+    description: Artifact-centric DFIR tool
+    icon: #
+    url: https://www.magnetforensics.com/downloadaxiom
+
+- name: Attack Frameworks
+displayData:
+    collapsed: true
+    itemSize: small
+    sortBy: default
+    itemCountX: 4
+    cols: 2  
+    rows: 2
+  icon: far fa-axe-battle
   items:
-  - title: Plex
-    description: Self-Hosted Media Streaming Service
-    icon: media/plex.png
-  - title: Tautulli
-    description: Monitoring and statistics for Plex
-    icon: media/tautulli.png
-  - title: Transmission
-    description: Transmission remote for managing torrents 
-    icon: media/transmission.png
-  - title: Couch Potato
-    description: Automatic Movie Downloading via NZBs & Torrents
-    icon: media/couch-potato.png
-- name: Home Control
-  items:
-  - title: Home Assistant
-    description: Smart home control
-    icon: smart-home/home-assistant.png
-  - title: Node-RED
-    description: Flow-based automation
-    icon: smart-home/node-red.png
-- name: Other Devices
-  items:
-  - title: Modem
-    description: ISP Router Modem Combo
-    icon: ''
-  - title: Wireless Access Point
-    description: View clients connected to WiFi
-  - title: Fing
-    description: Monitor connectivity issues, ISP quality, health checks and troubleshooting
-    provider: Fing
-    url: https://app.fing.com/
-  - title: Switch
-    description: Manage VLANs on Ubiquity Ethernet switch
-- name: External Utilities
+  - title: Yersinia
+    description: Framework for layer 2 attacks
+    icon: #
+    url: https://github.com/tomac/yersinia
+  - title: Bettercap
+    description: Framework to perform MITM attacks
+    icon: #
+    url: https://github.com/bettercap/bettercap
+  - name: External Utilities
   displayData:
     collapsed: true
   items:
@@ -199,6 +201,12 @@ sections:
   - title: Speed Test
     description: Upload + download speeds and latency
     url: https://speed.cloudflare.com/
-  - title: Mullvad Check
-    description: Confirms a secure connection to Mullvad's WireGuard servers
-    url: https://mullvad.net/check
+      - title: Modem
+    description: ISP Router Modem Combo
+    icon: ''
+  - title: Wireless Access Point
+    description: View clients connected to WiFi
+  - title: Fing
+    description: Monitor connectivity issues, ISP quality, health checks and troubleshooting
+    provider: Fing
+    url: https://app.fing.com/
