@@ -1,31 +1,31 @@
 ---
 # Page meta info, like heading, footer text and nav links
 pageInfo:
-  title: Dashy
-  description: Welcome to your new dashboard!
+  title: Keays XYZ
+  description: KeaysXYZ Startpage
   navLinks:
-  - title: GitHub
-    path: https://github.com/Lissy93/dashy
-  - title: Documentation
-    path: https://dashy.to/docs
-
+  - title: Home
+    path: /
 # Optional app settings and configuration
 appConfig:
-  theme: colorful
+  statusCheck: false
+  theme: Glass
+  startingView: minimal
+  iconSize: medium
+
+WebSearch:
+  searchEngine: 'duckduckgo'
+  openingMethod: 'newtab'
+  enableErrorReporting: true
 
 # Main content - An array of sections, each containing an array of items
 sections:
-- name: Getting Started
+- name: Dev
   icon: fas fa-rocket
   items:
-  - title: Dashy Live
-    description: Development a project management links for Dashy
-    icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
-    url: https://live.dashy.to/
-    target: newtab
   - title: GitHub
     description: Source Code, Issues and Pull Requests
-    url: https://github.com/lissy93/dashy
+    url: https://github.com/berlintay/dashytay
     icon: favicon
   - title: Docs
     description: Configuring & Usage Documentation
@@ -36,12 +36,41 @@ sections:
     description: See how others are using Dashy
     url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
     icon: far fa-grin-hearts
-  - title: Config Guide
-    description: See full list of configuration options
-    url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
-    icon: fas fa-wrench
-  - title: Support
-    description: Get help with Dashy, raise a bug, or get in contact
-    url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
-    icon: far fa-hands-helping
-  
+
+    - name: Deployement & Management
+    icon: fas fa-rocket-launch
+    items:
+      - title: Netlify
+      description: https://app.netlify.com/sites/keays
+
+ - title: Status Page
+    description: Uptime Monitoring
+    provider: Up Down
+    url: https://updown.io/p/b0bkd
+    icon: favicon
+    - name: Config Helpers
+  icon: fas fa-wrench
+  displayData:
+    collapsed: true
+    itemSize: small
+    sectionLayout: grid
+    itemCountX: 2
+  items:
+  - title: Schema Example
+    url: https://json-schema.app/view/%23?url=https%3A%2F%2Fraw.githubusercontent.com%2FLissy93%2Fdashy%2Fmaster%2Fsrc%2Futils%2FConfigSchema.json
+    icon: generative
+  - title: Config Validator
+    url: https://www.jsonschemavalidator.net/s/JFUj7X9J
+    icon: generative
+  - title: JSON to YAML
+    url: https://jsonformatter.org/json-to-yaml
+    icon: generative
+  - title: YAML to JSON
+    url: https://jsonformatter.org/yaml-to-json
+    icon: generative
+  - title: Example Configs
+    url: https://gist.github.com/Lissy93/000f712a5ce98f212817d20bc16bab10
+    icon: generative
+  - title: Config Docs
+    url: https://dashy.to/docs/configuring
+    icon: generative
