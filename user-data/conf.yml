@@ -15,7 +15,7 @@ pageInfo:
 sections:
 
 - name: Heute
-  iconL far fa-smile-beam
+  icon: far fa-smile-beam
   displayData:
     collapsed: false
     hideForGuests: false
