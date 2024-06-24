@@ -1,31 +1,154 @@
+---
+# Page meta info, like heading, footer text and nav links
 pageInfo:
-  title: KeaysXYZ
-  appConfig:
+  title: Hello, Mr. Keays
+  description: Keays XYZ Startpage
+  logo: https://i.ibb.co/71WyyzM/little-bot-3.png
+
+# Optional app settings and configuration
+appConfig:
   statusCheck: false
-  theme: glass-2
-  customCss: '.clock p.time { font-sizeL 3rem !important; }'
+  theme: glass
+  fontAwesomeKey: c94dc2b452
+  customCss: '.clock p.time { font-size: 3rem !important; }'
   layout: vertical
-  iconSize: small
-  fontAwesomeKey: 9A98CA63-F90B-48C1-89D0-4602BC3820C3
+  iconSize: medium
 
-  webSearch:
-  searchEngine: 'duckduckgo'
-  openingMethod: 'newtab'
-
+# Main content - An array of sections, each containing an array of items
 sections:
-
-- name: Heute
+- name: Today
   icon: far fa-smile-beam
   displayData:
     collapsed: false
     hideForGuests: false
-  widgets: 
+  widgets:
   - type: clock
   - type: weather
     options:
       apiKey: efdbade728b37086877a5e83442004db
-      city: Moncton
-        
+      city: Halifax
+  - type: crypto-watch-list
+    options:
+      currency: GBP
+      sortBy: marketCap
+      assets:
+      - bitcoin
+      - ethereum
+      - monero
+      - solana
+      - polkadot
+
+- name: Productivity
+  icon: far fa-briefcase
+  items:
+  - title: ProtonMail
+    icon: favicon
+    url: https://mail.protonmail.com/
+    description: Primary email account
+    tags: [hosted, personal, email, mail]
+    hotkey: 1
+  - title: CTemplar
+    icon: favicon
+    url: https://mail.ctemplar.com/
+    description: Secondary email account
+    tags: [hosted, personal, email, mail]
+    hotkey: 2
+  - title: AnonAddy
+    icon: favicon
+    url: https://app.anonaddy.com/
+    description: Mail alias forwarder
+    tags: [hosted, personal, forwarder, aliases, email]
+    hotkey: 3
+    statusCheckAcceptCodes: '401'
+  - title: LessPass
+    icon: favicon
+    url: https://lesspass.com/
+    description: Deterministic password generator
+    tags: [hosted, personal, password, generate, deterministic]
+    hotkey: 4
+  - title: EteSync
+    icon: favicon
+    url: https://pim.etesync.com/
+    description: Calendar + Contacts, CalDAV sync
+    tags: [hosted, personal, caldav, calendar, contacts, tasks, planning]
+    hotkey: 5
+  - title: Tasks
+    icon: https://i.ibb.co/v4jznK0/todo-list.png
+    url: https://pim.etesync.com/pim/tasks
+    description: Todo list and tasks from CalDAV
+    tags: [hosted, personal, caldav, tasks, planning]
+    hotkey: 6
+  - title: Tresorit
+    icon: favicon
+    url: https://web.tresorit.com/
+    description: Off-site encrypted file sync + backup
+    tags: [hosted, personal, files, backup, sync, storage ]
+    hotkey: 7
+  - title: StandardNotes
+    icon: favicon
+    url: https://app.standardnotes.com/
+    description: Notes, and my second brain
+    tags: [hosted, personal, notes ]
+    hotkey: 8
+  - title: 1Password
+    icon: favicon
+    url: https://my.1password.com/
+    description: Password Manager
+    tags: [hosted, personal, passwords ]
+    hotkey: 9
+
+- name: Dev & Cloud
+  icon: far fa-code
+  items:
+  - title: GitHub
+    icon: favicon
+    url: https://github.com/
+  - title: StackOverflow
+    icon: favicon
+    url: http://stackoverflow.com/
+  - title: CloudFlare
+    icon: favicon
+    url: https://dash.cloudflare.com/
+    statusCheckAcceptCodes: '403'
+  - title: DigitalOcean
+    icon: favicon
+    url: https://cloud.digitalocean.com/
+  - title: Netlify
+    icon: favicon
+    url: https://app.netlify.com/
+  - title: CodeSandbox
+    icon: favicon
+    url: https://codesandbox.io/dashboard
+  - title: Hack the Box
+    icon: favicon
+    url: https://www.hackthebox.com/home
+  - title: Documentation
+    subItems:
+    - title: JavaScript
+      url: https://developer.mozilla.org
+      icon: si-javascript
+      color: '#F7DF1E'
+    - title: TypeScript
+      url: https://www.typescriptlang.org/docs
+      icon: si-typescript
+      color: '#3178C6'
+    - title: Svelt
+      url: https://svelte.dev/docs
+      icon: si-svelte
+      color: '#FF3E00'
+    - title: Go
+      url: https://go.dev/doc
+      icon: si-go
+      color: '#00ADD8'
+    - title: Rust
+      url: https://doc.rust-lang.org/reference
+      icon: si-rust
+      color: '#000000'
+    - title: Docker
+      url: https://docs.docker.com/
+      icon: si-docker
+      color: '#2496ED'
+
 - name: Social & News
   icon: far fa-thumbs-up
   items:
@@ -50,166 +173,11 @@ sections:
   - title: Instagram
     icon: si-instagram
     url: https://www.instagram.com/
-    
-- name: Dev & Cloud
-  icon: far fa-code
-  items:
-  - title: GitHub
-    icon: favicon
-    url: https://github.com/
-  - title: StackOverflow
-    icon: favicon
-    url: http://stackoverflow.com/
-  - title: CloudFlare
-    icon: favicon
-    url: https://dash.cloudflare.com/
-    statusCheckAcceptCodes: '403'
-  - title: Netlify
-    icon: favicon
-    url: https://app.netlify.com/
-  - title: Hack the Box
-    icon: favicon
-    url: https://www.hackthebox.com/home
-  - title: Documentation
-  
-- name: Web
-  icon: far fa-wifi
-  
-  displayData:
-    collapsed: true
-    itemSize: small
-    sortBy: default
-    itemCountX: 4
-    cols: 2  
-    rows: 2
-  items:
-  - title: BurpSuite
-    description: A graphical tool to testing website security
-    icon: #
-    url: https://portswigger.net/burp
-  - title: Commix
-    description: Automated All-in-One OS Command Injection and Exploitation Tool
-    icon: #
-    url: https://github.com/commixproject/commix
-  - title: Hackbar
-    description: Firefox addon for easy web exploitation
-    icon: #
-    url: https://addons.mozilla.org/en-US/firefox/addon/hackbartool/
-  - title: OWASP ZAP
-    description: Intercepting proxy to replay, debug, and fuzz HTTP requests and responses
-    icon: #
-    url: https://www.owasp.org/index.php/Projects/OWASP_Zed_Attack_Proxy_Project
-  - title: Postman
-    description: Testing and sending web requests
-    icon: #
-    url: https://www.postman.com/
-  - title: Raccoon
-    description: Reconnaissance and vulnerability scanning
-    icon: #
-    url: https://github.com/evyatarmeged/Raccoon
-  - title: SQLMap
-    description: Automatic SQL injection and database takeover tool
-    icon: #
-    url: https://github.com/sqlmapproject/sqlmap
-  - title: W3af
-    description: Web Application Attack and Audit Framework
-    icon: #
-    url: https://github.com/andresriancho/w3af
-  - title: Xsser
-    description: Automated XSS tester
-    icon: #
-    url: http://xsser.sourceforge.net/
-
-- name: Bruteforce
-icon: far fa-user-visor
-displayData:
-    collapsed: true
-    itemSize: small
-    sortBy: default
-    itemCountX: 4
-    cols: 2  
-    rows: 2
-  items:
-  - title: HashCat
-    description: Password cracker
-    icon: #
-    url: https://hashcat.net/hashcat/
-  - title: Hydra
-    description: parallelized login cracker which supports numerous protocols to attack
-    icon: #
-    url: https://tools.kali.org/password-attacks/hydra
-  - title: John The Jumbo
-    description: Community enhanced version of John the Ripper password cracker
-    icon: #
-    url: https://github.com/magnumripper/JohnTheRipper
-  - title: Nozzlr
-    description: Script-friendly, modular bruteforce framework
-    icon: #
-    url: https://github.com/intrd/nozzlr
-
-- name: Forensics
-  icon: far fa-microscope
-displayData:
-    collapsed: true
-    itemSize: small
-    sortBy: default
-    itemCountX: 4
-    cols: 2  
-    rows: 2
-
-  items:
-  - title: Dnscat2
-    description: Hosts communication through DNS
-    icon: #
-    url: https://github.com/iagox86/dnscat2
-  - title: Registry Dumper
-    description: Examine registry of devices
-    icon: #
-    url: http://www.kahusecurity.com/posts/registry_dumper_find_and_dump_hidden_registry_keys.html
-  - title: Magnet AXIOM
-    description: Artifact-centric DFIR tool
-    icon: #
-    url: https://www.magnetforensics.com/downloadaxiom
-
-- name: Attack Frameworks
-  icon: far fa-axe-battle
-displayData:
-    collapsed: true
-    itemSize: small
-    sortBy: default
-    itemCountX: 4
-    cols: 2  
-    rows: 2
-  items:
-  - title: Yersinia
-    description: Framework for layer 2 attacks
-    icon: #
-    url: https://github.com/tomac/yersinia
-  - title: Bettercap
-    description: Framework to perform MITM attacks
-    icon: #
-    url: https://github.com/bettercap/bettercap
-  
-  
-  - name: External Utilities
-  displayData:
-    collapsed: true
-  items:
-  - title: Public IP
-    description: Check public IP and associated data
-    url: https://www.whatismyip.com/
-  - title: Who Is Lookup
-    description: Check ICAN info for a given IP address or domain
-    url: https://whois.domaintools.com/
-  - title: Speed Test
-    description: Upload + download speeds and latency
-    url: https://speed.cloudflare.com/
-      - title: Modem
-    description: ISP Router Modem Combo
-    icon: ''
-  - title: Wireless Access Point
-    description: View clients connected to WiFi
-  - title: Fing
-    description: Monitor connectivity issues, ISP quality, health checks and troubleshooting
-    provider: Fing
-    url: https://app.fing.com/
+  - title: News
+    icon: si-bbc
+    url: https://bbc.co.uk/news
+  - title: Crypto Prices
+    icon: fab fa-bitcoin
+    url: https://www.livecoinwatch.com/
+    description: Real-time crypto prices and read-only portfolio
+    provider: Live Coin Watch
