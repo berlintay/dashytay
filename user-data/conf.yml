@@ -1,36 +1,38 @@
 ---
 # Page meta info, like heading, footer text and nav links
 pageInfo:
-  title: Start - KeaysXYZ 
-  description: Keays XYZ Startpage
-  logo: https://i.ibb.co/71WyyzM/little-bot-3.png
-
-# Optional app settings and configuration
+title: Start - KeaysXYZ
+description: Keays XYZ Startpage
 appConfig:
-  statusCheck: false
-  theme: glass
-  fontAwesomeKey: c94dc2b452
-  customCss: '.clock p.time { font-size: 3rem !important; }'
-  layout: vertical
-  iconSize: medium
+statusCheck: false
+theme: glass
 
-# Main content - An array of sections, each containing an array of items
+backgroungImg: https://i.ibb.co/1rzcXJ0/arch-linux-blue-and-green-wallpaper-by-moonditto-d-by-solecrush-dgkfi71.png
+fontAwesomeKey: c94dc2b452
+customCss: '.clock p.time { font-size: 3rem !important; }'
+layout: vertical
+iconSize: medium
 sections:
 - name: Today
-  icon: far fa-smile-beam
-  displayData:
-    collapsed: false
-    hideForGuests: false
-  widgets:
-  - type: clock
-  - type: weather
+icon: far fa-smile-beam
+displayData:
+collapsed: false
+hideForGuests: false
+sortBy: default
+rows: 3
+cols: 1
+widgets:
+    - type: clock
+    id: 0_513_clock
+    - type: weather
     options:
-      apiKey: efdbade728b37086877a5e83442004db
-      city: Halifax
-  - type: image
+    apiKey: efdbade728b37086877a5e83442004db
+    city: Halifax
+    id: 1_513_weather
+    - type: hackernews-trending
     options:
-      imagePath: https://i.ibb.co/Gt5ww9F/j10k1vdh.png
-
+    stories: newstories
+    limit: 10
 - name: Productivity
   icon: far fa-briefcase
   items:
