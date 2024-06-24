@@ -121,6 +121,7 @@ sections:
     url: http://xsser.sourceforge.net/
 
 - name: Bruteforce
+icon: far fa-user-visor
 displayData:
     collapsed: true
     itemSize: small
@@ -128,7 +129,6 @@ displayData:
     itemCountX: 4
     cols: 2  
     rows: 2
-  icon: far fa-user-visor
   items:
   - title: HashCat
     description: Password cracker
@@ -148,6 +148,7 @@ displayData:
     url: https://github.com/intrd/nozzlr
 
 - name: Forensics
+  icon: far fa-microscope
 displayData:
     collapsed: true
     itemSize: small
@@ -155,7 +156,7 @@ displayData:
     itemCountX: 4
     cols: 2  
     rows: 2
-  icon: far fa-microscope
+
   items:
   - title: Dnscat2
     description: Hosts communication through DNS
@@ -171,6 +172,7 @@ displayData:
     url: https://www.magnetforensics.com/downloadaxiom
 
 - name: Attack Frameworks
+  icon: far fa-axe-battle
 displayData:
     collapsed: true
     itemSize: small
@@ -178,7 +180,6 @@ displayData:
     itemCountX: 4
     cols: 2  
     rows: 2
-  icon: far fa-axe-battle
   items:
   - title: Yersinia
     description: Framework for layer 2 attacks
@@ -188,6 +189,8 @@ displayData:
     description: Framework to perform MITM attacks
     icon: #
     url: https://github.com/bettercap/bettercap
+  
+  
   - name: External Utilities
   displayData:
     collapsed: true
