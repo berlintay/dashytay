@@ -22,26 +22,24 @@ sections:
     hideForGuests: false
   widgets:
  
+  - type: public-ip
   
   - type: clock
     options:
       apiKey: efdbade728b37086877a5e83442004db
       city: Halifax
-  - type: domain-monitor
-    options:
-      domain: aidot.org
-      apiKey: 4e2cb12667bcafe387987485abe7a1c9
+  
+  
   - type: news-headlines
     options:
         apiKey: 1Pu29ud5Ej-999l_5WZRT-yEueBylt_5gghWgIinzjAdo6KE
         category: Programming
         hideImages: true
+        count: 5
         
-  - type: cve-vulnerability
+  - type: hackernews-trending
     options:
-          sortBy: publish-date
-          hasExploit: true
-          minScore: 4
+          stories: newstories
           limit: 10 
 
 - name: Productivity
