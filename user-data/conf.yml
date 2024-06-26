@@ -31,18 +31,18 @@ sections:
     options:
       domain: aidot.org
       apiKey: 4e2cb12667bcafe387987485abe7a1c9
-  - type: joke
-  options:
-    safeMode: false
-    language: en
-    category: all
-
-- type: cve-vulnerability
-  options:
-    sortBy: publish-date
-    hasExploit: true
-    minScore: 4
-    limit: 10 
+  - type: news-headlines
+    options:
+        apiKey: 1Pu29ud5Ej-999l_5WZRT-yEueBylt_5gghWgIinzjAdo6KE
+        category: Programming
+        hideImages: true
+        
+  - type: cve-vulnerability
+    options:
+          sortBy: publish-date
+          hasExploit: true
+          minScore: 4
+          limit: 10 
 
 - name: Productivity
   icon: far fa-briefcase
