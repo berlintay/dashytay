@@ -1632,7 +1632,7 @@ html[data-theme='neomorphic'] {
   --background-darker: #190842;
   --settings-background: transparent;
   --search-container-background: transparent;
-  --font-headings: 'Segoe UI', 'Ariel', 'sans-serif';
+  --font-headings: 'AnonymousPro-Regular', 'Ariel', 'sans-serif';
   --font-body: 'Roboto', 'Segoe UI', 'Ariel', 'sans-serif';
   --minimal-view-background-color: transparent;
   --minimal-view-group-background: rgba(255, 255, 255, 0.15);
@@ -1813,9 +1813,12 @@ html[data-theme='glass'] {
 
 html[data-theme='glass-2'] {
     body {
-    background: url('https://i.ibb.co/1rzcXJ0/arch-linux-blue-and-green-wallpaper-by-moonditto-d-by-solecrush-dgkfi71.png') center center no-repeat;
+    background: url('https://i.ibb.co/tDQZP40/Designer-1.png') center center no-repeat;
     background-size: cover;
     background-color: #090317;
+    .home {
+      background: transparent;
+    }
   }
 }
 

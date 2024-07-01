@@ -1,53 +1,42 @@
 ---
-# Page meta info, like heading, footer text and nav links
 pageInfo:
-  title: Start - KeaysXYZ 
-  description: Keays XYZ Startpage
+title: KeaysXYZ
+logo: 'https://i.ibb.co/yfBLjFh/keays-XYZ-log48x48.png'
+
 
 # Optional app settings and configuration
 appConfig:
   statusCheck: true
-  defaultOpeningMethod: minimal
+  defaultOpeningMethod: newtab
   theme: glass-2
   fontAwesomeKey: c94dc2b452
-  customCss: '.clock p.time { font-size: 3rem !important; }'
-  layout: auto
   iconSize: large
 # Main content - An array of sections, each containing an array of items
 sections:
-- name: Today
-  icon: far fa-smile-beam
+- name: Welcome
+  icon: far fa-linux
   displayData:
     collapsed: false
     hideForGuests: false
   widgets:
  
-  - type: public-ip
-  
-  - type: clock
-    options:
-      apiKey: efdbade728b37086877a5e83442004db
-      city: Halifax
-  
-  
   - type: news-headlines
     options:
         apiKey: 1Pu29ud5Ej-999l_5WZRT-yEueBylt_5gghWgIinzjAdo6KE
         category: Programming
         hideImages: true
-        count: 5
-        
+        count: 3
   - type: hackernews-trending
     options:
           stories: newstories
-          limit: 10 
+          limit: 3 
 
 - name: Productivity
-  icon: far fa-briefcase
+  icon: far fa-wrench
   items:
   - title: Keays Mail 
     icon: favicon
-    url: https://mail.zoho.com/zm/?fromWebApp=true#mail/folder/inbox
+    url: https://mail.zoho.com/
     description: Primary email account
     tags: [hosted, personal, email, mail]
     hotkey: 1
@@ -74,26 +63,13 @@ sections:
     icon: https://i.ibb.co/v4jznK0/todo-list.png
     url: https://www.bing.com/chat?form=NTPCHB&ocid=msedgntp&pc=U531&cvid=f8022fca656f46eb8d52d251f11c850f&ei=8
     description: Microsoft Copilot Pro 
-    hotkey: 6
-  - title: Tresorit
-    icon: favicon
-    url: https://web.tresorit.com/
-    description: Off-site encrypted file sync + backup
-    tags: [hosted, personal, files, backup, sync, storage ]
-    hotkey: 7
+    hotkey: 6   
   - title: StandardNotes
     icon: favicon
     url: https://app.standardnotes.com/
     description: Notes, and my second brain
-    tags: [hosted, personal, notes ]
-    hotkey: 8
-  - title: 1Password
-    icon: favicon
-    url: https://my.1password.com/
-    description: Password Manager
-    tags: [hosted, personal, passwords ]
-    hotkey: 9
-
+    
+    
 - name: Dev & Cloud
   icon: far fa-code
   items:
@@ -107,51 +83,26 @@ sections:
     icon: favicon
     url: https://dash.cloudflare.com/
     statusCheckAcceptCodes: '403'
-  - title: DigitalOcean
-    icon: favicon
-    url: https://cloud.digitalocean.com/
+  - title: LPNB
+    url: https://lpnb.ca/wp-admin
+    description: Second owned domain via NixiHost 
+    statusCheckAcceptCodes: '403'
+  - title: Gemini
+    url: https://gemini.google.com/app?hl=en
+    description: Google Bard
+    statusCheckAcceptCodes: '403'
   - title: Netlify
     icon: favicon
     url: https://app.netlify.com/
-  - title: CodeSandbox
-    icon: favicon
-    url: https://codesandbox.io/dashboard
   - title: Hack the Box
     icon: favicon
     url: https://www.hackthebox.com/home
   - title: Documentation
-    subItems:
-    - title: JavaScript
-      url: https://developer.mozilla.org
-      icon: si-javascript
-      color: '#F7DF1E'
-    - title: TypeScript
-      url: https://www.typescriptlang.org/docs
-      icon: si-typescript
-      color: '#3178C6'
-    - title: Svelt
-      url: https://svelte.dev/docs
-      icon: si-svelte
-      color: '#FF3E00'
-    - title: Go
-      url: https://go.dev/doc
-      icon: si-go
-      color: '#00ADD8'
-    - title: Rust
-      url: https://doc.rust-lang.org/reference
-      icon: si-rust
-      color: '#000000'
-    - title: Docker
-      url: https://docs.docker.com/
-      icon: si-docker
-      color: '#2496ED'
 
 - name: Social & News
   icon: far fa-thumbs-up
   items:
-  - title: Discord
-    icon: si-discord
-    url: https://discord.com/channels/
+
   - title: Mastodon
     icon: si-mastodon
     url: https://mastodon.social/
@@ -170,11 +121,3 @@ sections:
   - title: Instagram
     icon: si-instagram
     url: https://www.instagram.com/
-  - title: News
-    icon: si-bbc
-    url: https://bbc.co.uk/news
-  - title: Crypto Prices
-    icon: fab fa-bitcoin
-    url: https://www.livecoinwatch.com/
-    description: Real-time crypto prices and read-only portfolio
-    provider: Live Coin Watch
